@@ -1,4 +1,4 @@
-baseURL = "https://techtalksmx.netlify.app/"
+baseURL = "https://techntalks.github.io/"
 languageCode = "en-us"
 title = "Tech Talks"
 theme = 'my-theme'
