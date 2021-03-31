@@ -1,0 +1,46 @@
+{{ define "metadata" }}
+<meta name="description" content="{{ $.Site.Params.description }}" />
+<meta name="twitter:description" content="{{ $.Site.Params.description }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="{{ $.Site.Params.twitter }}" />
+<meta name="twitter:creator" content="{{ $.Site.Params.twitter }}" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:image" content="{{ absURL $.Site.Params.cover }}" />
+<meta property="og:image" content="{{ absURL $.Site.Params.cover }}" />
+{{ end }} {{ define "main" }}
+<div class="container mt-10">
+  <h1>{{ upper .Title }}</h1>
+
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      {{ range .Pages }}
+      <!-- Slides -->
+      <a
+        class="swiper-slide"
+        href="{{ .Params.link }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <article class="card">
+          <div class="card__image-center">
+            <img class="card__image" src="{{ .Params.cover_image }}" alt="{{ .Title }}" />
+          </div>
+          <h3 class="card__title">{{ .Title }}</h3>
+          <p class="card__description">{{ .Params.description }}</p>
+        </article>
+      </a>
+
+      {{ end }}
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  {{ partial "sidebar" .Site.Taxonomies.categories }}
+</div>
+{{ end }}

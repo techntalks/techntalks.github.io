@@ -1,0 +1,47 @@
+baseURL = "https://techtalksmx.netlify.app/"
+languageCode = "en-us"
+title = "Tech Talks"
+theme = 'my-theme'
+paginate = 5
+
+[params]
+  author = "Tech Talks"
+  description = "A friendly community with the only purpose of improve our english. 💙"
+  cover = "/img/cover.png"
+  twitter = "@lnxzpn"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  kinds = 'kinds'
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog"
+    weight = 10
+  [[menu.main]]
+    identifier = "resources"
+    name = "Resources"
+    url = "/learning-resources"
+    weight = 20
+  [[menu.main]]
+    identifier = "events"
+    name = "Events"
+    url = "/events"
+    weight = 30
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 2

@@ -1,0 +1,7 @@
+<div class="sidebar header__shadow">
+  <h3 class="sidebar__title"></h3>
+
+  {{ range . }}
+  <a href="{{ .Page.RelPermalink }}" class="sidebar__content">{{ .Page.Title }}</a>
+  {{ end }}
+</div>

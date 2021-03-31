@@ -1,0 +1,51 @@
+{{ define "metadata" }}
+<meta name="description" content="{{ .Description }}" />
+<meta name="twitter:description" content="{{ .Description }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="{{ $.Site.Params.twitter }}" />
+<meta name="twitter:creator" content="{{ .Params.twitter }}" />
+<meta name="twitter:title" content="{{ .Params.title }}" />
+<meta name="twitter:image" content="{{ absURL .Params.cover_image }}" />
+<meta property="og:image" content="{{ absURL .Params.cover_image }}" />
+{{ end }} {{ define "main" }}
+<main class="container mt-10">
+  <img src="{{ .Params.cover_image }}" alt="{{ .Title }}" />
+
+  <h1>{{ .Title }}</h1>
+
+  <div class="flex flex-content-between flex-items-center">
+    <div class="metadata">
+      <p><strong>Autor:</strong> {{ .Params.author }}</p>
+      <p><strong>Publish Date:</strong> {{ .PublishDate.Format "January 2, 2006" }}</p>
+
+      <div class="metadata__social">
+        <a href="{{ .Params.twitter }}" target="_blank" rel="noopener noreferrer">
+          <svg class="h-3" viewBox="0 0 512 512" fill="white">
+            <path
+              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div
+      id="share"
+      class="share-box flex flex-direction-column flex-content-center flex-items-center"
+    >
+      <svg
+        class="h-3"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
+        ></path>
+      </svg>
+      <p class="share-box__text">Share</p>
+    </div>
+  </div>
+
+  {{ .Content }}
+</main>
+{{ end }}

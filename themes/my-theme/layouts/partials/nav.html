@@ -1,0 +1,90 @@
+<header class="header">
+  <nav class="nav container">
+    <a class="nav__logo" href="{{ .Site.BaseURL }}">
+      Tech
+      <span class="gradient-text">Talks</span>
+    </a>
+    <ul class="nav__menu">
+      {{ range .Site.Menus.main }}
+      <li class="nav__link">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }} {{ if eq .Page.RelPermalink "/" }}
+      <li class="nav__link">
+        <a href="#about">About</a>
+      </li>
+      {{ else }}
+      <li class="nav__link">
+        <a href="/#about">About</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
+<nav class="mobile-nav">
+  {{ range .Site.Menus.main }}
+  <a href="{{ .URL }}" aria-label="{{ .Name }}">
+    {{ if eq .URL "/blog" }}
+    <svg class="mobile-nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+      <path
+        fill-rule="evenodd"
+        d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    {{ else if eq .URL "/learning-resources" }}
+    <svg class="mobile-nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path
+        d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"
+      />
+    </svg>
+    {{ else if eq .URL "/events" }}
+    <svg class="mobile-nav__icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill-rule="evenodd"
+        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+    {{ end }}
+  </a>
+  {{ end }} {{ if eq .Page.RelPermalink "/" }}
+  <a href="#about" aria-label="About">
+    <svg class="mobile-nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </a>
+  {{ else }}
+  <a href="/#about" aria-label="About">
+    <svg class="mobile-nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </a>
+  {{ end }}
+</nav>
+
+{{ if or (eq .Page.RelPermalink "/learning-resources/") (eq .Page.RelPermalink "/blog/") }}
+<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+<label for="openSidebarMenu" class="sidebarIconToggle">
+  <div class="spinner diagonal part-1"></div>
+  <div class="spinner horizontal"></div>
+  <div class="spinner diagonal part-2"></div>
+</label>
+{{ end }} 
+{{ if eq .Page.RelPermalink "/events/" }}
+<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+<label for="openSidebarMenu" class="sidebarIconToggle">
+  <div class="spinner diagonal part-1"></div>
+  <div class="spinner horizontal"></div>
+  <div class="spinner diagonal part-2"></div>
+</label>
+{{ end }}
