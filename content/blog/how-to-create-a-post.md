@@ -5,7 +5,7 @@ draft: false
 author: 'Jorge Acero'
 twitter: 'https://twitter.com/imjulianeral'
 github: 'https://github.com/imjulianeral'
-cover_image: '/img/blog/post-name/cover-image.jpg'
+cover_image: '/img/blog/how-to-create-a-post/cover.png'
 description: "post's brief summary"
 tags: ['tutorials']
 ---
@@ -95,6 +95,10 @@ You need to fill all the properties, just the `original_post` property is option
 
 Your first name and last name.
 
+### Draft.
+
+If `true` indicates the post is not completed and won't appear on the production build. **Always remember to change the draft property to false when you complete your post, it won't appear other way.**
+
 ### Twitter
 
 Your twitter account.
@@ -130,7 +134,7 @@ Now, to see how your post is looking while you're writing it, you have to run de
 hugo serve -D
 ```
 
-This will open a port on localhost to see the page.
+This will open a port on localhost to see the page. The `-D` flag means that it will render the posts that have the draft property to true, also **always remember to change the draft property to false when you complete your post, it won't appear other way**
 
 Finally you have to run:
 
