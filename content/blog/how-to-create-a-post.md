@@ -5,7 +5,7 @@ draft: false
 author: 'Jorge Acero'
 twitter: 'https://twitter.com/imjulianeral'
 github: 'https://github.com/imjulianeral'
-cover_image: '/img/blog/post-name/cover-image.jpg'
+cover_image: '/img/blog/how-to-create-a-post/cover.png'
 description: "post's brief summary"
 tags: ['tutorials']
 ---
