@@ -6,7 +6,7 @@ paginate = 5
 
 [params]
   author = "Tech Talks"
-  description = "We are a friendly community with the sole purpose of improving our English ❤️"
+  description = "We are a friendly community with the only purpose of improving our English ❤️"
   cover = "/img/cover.png"
   twitter = "@lnxzpn"
 
