@@ -6,11 +6,11 @@ author: 'Jorge Acero'
 twitter: 'https://twitter.com/imjulianeral'
 github: 'https://github.com/imjulianeral'
 cover_image: '/img/blog/how-to-create-a-post/cover.png'
-description: "post's brief summary"
-tags: ['tutorials']
+description: 'How to create a post on tech talks blog'
+tags: ['techtalks']
 ---
 
-Hi! I'm so glad you want to contribute to the community by sharing your knowledge in a blog post, you'll see how easy is 💗.
+Hi! We're so glad you want to contribute to the community by sharing your knowledge in a blog post, you'll see how easy is 💗.
 
 ## Hugo Installation.
 
@@ -114,7 +114,7 @@ If you already published the post then you can add the link of your blog post.
 ### Cover Image
 
 The thumbnail of the post, recommended size: **1200x620 px**.
-You can save your cover image in the directory: `static/img/blog/post-name/cover.png`. Actually there you can put all the images that you need for your post.
+You can save your cover image in the directory: `static/img/blog/post-name/cover.png`. Actually there you can put all the images that you need for your post and please use **[tinypng](https://tinypng.com/)** to reduce the size of your images.
 
 ### Description
 

@@ -7,5 +7,5 @@ twitter: "https://twitter.com/username"
 cover_image: '/img/events/event-name.jpg'
 description: "brief summary"
 event_links: ['https://eventsite.com', 'https://stream.com']
-events: ['event']
+kinds: ['event']
 ---
