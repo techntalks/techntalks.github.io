@@ -14,6 +14,6 @@ kinds: ['inauguration']
 
 Hi Everyone, the staff of Tech Talks community is glad to inaugurate the Official Tech Talks page!!!!!!!
 
-In this page as community member you can be aware of [new events](https://techntalks.github.io/events/), read [learning resources](https://techntalks.github.io/learning-resources/), [blog posts](https://techntalks.github.io/blog/) and not just that! You can even [create your own posts](https://techntalks.github.io/blog/how-to-create-a-post/) and [add learning resources](https://techntalks.github.io/blog/how-to-add-a-learning-resource/) that you know.
+In this page as community member you can be aware of **[new events](https://techntalks.github.io/events/)**, read **[learning resources](https://techntalks.github.io/learning-resources/)**, **[blog posts](https://techntalks.github.io/blog/)** and not just that! You can even **[create your own posts](https://techntalks.github.io/blog/how-to-create-a-post/)** and **[add learning resources](https://techntalks.github.io/blog/how-to-add-a-learning-resource/)** that you know.
 
 ## Thanks for being part of the community. 🤗
