@@ -1,23 +1,21 @@
 {{ define "metadata" }}
-  <meta name="description" content="{{ $.Site.Params.description }}" />
-  <meta name="twitter:description" content="{{ $.Site.Params.description }}" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="{{ $.Site.Params.twitter }}" />
-  <meta name="twitter:creator" content="{{ $.Site.Params.twitter }}" />
-  <meta name="twitter:title" content="{{ singularize .Title }} | {{ .Site.Title }}" />
-  <meta name="twitter:image" content="{{ absURL $.Site.Params.cover }}" />
-  <meta property="og:image" content="{{ absURL $.Site.Params.cover }}" />
-{{ end }}
-
+<meta name="description" content="{{ $.Site.Params.description }}" />
+<meta name="twitter:description" content="{{ $.Site.Params.description }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="{{ $.Site.Params.twitter }}" />
+<meta name="twitter:creator" content="{{ $.Site.Params.twitter }}" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:image" content="{{ absURL $.Site.Params.cover }}" />
+<meta property="og:image" content="{{ absURL $.Site.Params.cover }}" />
+{{ end }} 
 {{ define "main" }}
-  <div class="container mt-10">
-    <h1>{{ .Title }}</h1>
-    
-    
+<div class="container mt-10">
+  <h1>{{ .Title }}</h1>
+      
     {{ range .Paginator.Pages }}
       <article  class="list">
         <h3>
-          <a href="{{ .RelPermalink }}">            
+          <a href="{{ .RelPermalink }}" class="link">            
             {{ .Title }}
           </a>
         </h3>
@@ -25,13 +23,15 @@
           {{ if .Params.kinds }}
             <strong>Kind of Event:</strong> 
             {{ range .Params.kinds }}
-              <a class="sidebar__content" href="{{ "/kinds/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> 
+              <a class="badge" href="{{ "/kinds/" | relLangURL }}{{ . | urlize }}">
+                {{ . }}
+              </a> 
             {{ end }}
           {{ end }}
         </p>
         
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-          <strong>Published on:</strong> {{ .Date.Format "January 2, 2006" }}
+          <strong>Publish Date:</strong> {{ .Date.Format "January 2, 2006"}}
         </time>
       </article>
     {{ end }}
@@ -39,6 +39,5 @@
     {{ partial "sidebar" .Site.Taxonomies.kinds }}
 
     {{ partial "pagination" . }}
-  </div>
+</div>
 {{ end }}
-

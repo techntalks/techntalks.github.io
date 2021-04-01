@@ -15,7 +15,7 @@
     {{ range .Paginator.Pages }}
       <article  class="list">
         <h3>
-          <a href="{{ .RelPermalink }}">            
+          <a href="{{ .RelPermalink }}" class="link">            
             {{ .Title }}
           </a>
         </h3>
@@ -23,7 +23,9 @@
           {{ if .Params.kinds }}
             <strong>Kind of Event:</strong> 
             {{ range .Params.kinds }}
-              <a class="sidebar__content" href="{{ "/kinds/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> 
+              <a class="badge" href="{{ "/kinds/" | relLangURL }}{{ . | urlize }}">
+                {{ . }}
+              </a> 
             {{ end }}
           {{ end }}
         </p>

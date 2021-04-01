@@ -1,21 +1,21 @@
 <header class="header">
   <nav class="nav container">
-    <a class="nav__logo" href="{{ .Site.BaseURL }}">
+    <a class="nav__logo link" href="{{ .Site.BaseURL }}">
       Tech
       <span class="gradient-text">Talks</span>
     </a>
     <ul class="nav__menu">
       {{ range .Site.Menus.main }}
       <li class="nav__link">
-        <a href="{{ .URL }}">{{ .Name }}</a>
+        <a class="link" href="{{ .URL }}">{{ .Name }}</a>
       </li>
       {{ end }} {{ if eq .Page.RelPermalink "/" }}
       <li class="nav__link">
-        <a href="#about">About</a>
+        <a class="link" href="#about">About</a>
       </li>
       {{ else }}
       <li class="nav__link">
-        <a href="/#about">About</a>
+        <a class="link" href="/#about">About</a>
       </li>
       {{ end }}
     </ul>

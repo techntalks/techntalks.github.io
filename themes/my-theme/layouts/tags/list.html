@@ -4,37 +4,42 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="{{ $.Site.Params.twitter }}" />
   <meta name="twitter:creator" content="{{ $.Site.Params.twitter }}" />
-  <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta name="twitter:title" content="{{ .Site.Title }}" />
   <meta name="twitter:image" content="{{ absURL $.Site.Params.cover }}" />
   <meta property="og:image" content="{{ absURL $.Site.Params.cover }}" />
-{{ end }}
-
+{{ end }} 
 {{ define "main" }}
   <div class="container mt-10">
-    <h1>{{ singularize .Title }}</h1>
+    <h1>{{ .Title }}</h1>
     
-    {{ range .Data.Pages }}
-      <article class="list">
-        <a href="{{ .RelPermalink }}">
-          <h3>
+    
+    {{ range .Paginator.Pages }}
+      <article  class="list">
+        <h3>
+          <a class="link" href="{{ .RelPermalink }}">            
             {{ .Title }}
-          </h3>
-        </a>
+          </a>
+        </h3>
         <p>
           {{ if .Params.tags }}
             <strong>Tags:</strong> 
             {{ range .Params.tags }}
-              <a class="sidebar__content" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> 
+              <a class="badge" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+                {{ . }}
+              </a> 
             {{ end }}
           {{ end }}
         </p>
         
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-          Fecha de publicación: {{ .Date.Format "2-01-2006" }}
+          <strong>Publish Date:</strong> {{ .Date.Format "January 2, 2006" }}
         </time>
       </article>
-  {{ end }}
-    {{ partial "sidebar.html" .Site.Taxonomies.tags }}
+    {{ end }}
+    
+    {{ partial "sidebar" .Site.Taxonomies.tags }}
+
+    {{ partial "pagination" . }}
   </div>
 {{ end }}
 

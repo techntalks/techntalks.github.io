@@ -16,7 +16,7 @@
     {{ range .Paginator.Pages }}
       <article  class="list">
         <h3>
-          <a href="{{ .RelPermalink }}">            
+          <a class="link" href="{{ .RelPermalink }}">            
             {{ .Title }}
           </a>
         </h3>
@@ -24,7 +24,9 @@
           {{ if .Params.tags }}
             <strong>Tags:</strong> 
             {{ range .Params.tags }}
-              <a class="sidebar__content" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> 
+              <a class="badge" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+                {{ . }}
+              </a> 
             {{ end }}
           {{ end }}
         </p>
