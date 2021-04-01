@@ -66,8 +66,8 @@ img {
 .color-blue {
   color: var(--blue);
 }
-.mt-10 {
-  margin-top: 10rem;
+.mt-7 {
+  margin-top: 7rem;
 }
 .mt-3 {
   margin-top: 3rem;
@@ -156,11 +156,15 @@ img {
 
 .flex {
   display: flex;
+  gap: 1rem;
+}
+.flex-responsive {
+  display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 @media (min-width: 768px) {
-  .flex {
+  .flex-responsive {
     flex-direction: row;
   }
 }
@@ -497,7 +501,7 @@ img {
   padding: 1rem 0;
   border: rgba(0, 0, 0, 0) 1px solid;
   border-radius: 1rem;
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.5s ease-in-out;
 }
 @media (min-width: 768px) {
@@ -507,7 +511,7 @@ img {
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0);
   }
   .share-box:hover {
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
   }
 }
 

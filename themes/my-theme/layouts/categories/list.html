@@ -7,8 +7,9 @@
 <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta name="twitter:image" content="{{ absURL $.Site.Params.cover }}" />
 <meta property="og:image" content="{{ absURL $.Site.Params.cover }}" />
-{{ end }} {{ define "main" }}
-<div class="container mt-10">
+{{ end }} 
+{{ define "main" }}
+<div class="container mt-7">
   <h1>{{ upper .Title }}</h1>
 
   <!-- Slider main container -->

@@ -7,13 +7,15 @@
 <meta name="twitter:title" content="{{ .Params.title }}" />
 <meta name="twitter:image" content="{{ absURL .Params.cover_image }}" />
 <meta property="og:image" content="{{ absURL .Params.cover_image }}" />
-{{ end }} {{ define "main" }}
-<main class="container mt-10">
+{{ end }} 
+
+{{ define "main" }}
+<main class="container mt-7">
   <img src="{{ .Params.cover_image }}" alt="{{ .Title }}" />
 
   <h1>{{ .Title }}</h1>
 
-  <div class="flex flex-content-between flex-items-center">
+  <div class="flex-responsive flex-content-between flex-items-center">
     <div class="metadata">
       <p><strong>Author:</strong> {{ .Params.author }}</p>
       <p><strong>Publish Date:</strong> {{ .PublishDate.Format "January 2, 2006" }}</p>

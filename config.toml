@@ -6,7 +6,7 @@ paginate = 5
 
 [params]
   author = "Tech Talks"
-  description = "A friendly community with the only purpose of improve our english. 💙"
+  description = "We are a friendly community with the sole purpose of improving our English ❤️"
   cover = "/img/cover.png"
   twitter = "@lnxzpn"
 
@@ -34,14 +34,14 @@ paginate = 5
 
 [markup]
   [markup.highlight]
-    anchorLineNos = false
+    anchorLineNos = true
     codeFences = true
     guessSyntax = false
     hl_Lines = ""
     lineAnchors = ""
     lineNoStart = 1
     lineNos = true
-    lineNumbersInTable = true
+    lineNumbersInTable = false
     noClasses = true
-    style = "dracula"
+    style = "night-owl"
     tabWidth = 2
