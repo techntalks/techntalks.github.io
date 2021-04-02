@@ -111,6 +111,7 @@ img {
 .badge {
   color: white;
   padding: 0.5rem 1rem;
+  margin-right: 1rem;
   border-radius: 2rem;
   background-image: linear-gradient(
     135deg,
